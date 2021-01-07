@@ -1,0 +1,11 @@
+{
+  "loggedIn": "true",
+  "userData": {
+    "user_id": 6,
+    "email": "temp1@mail.com",
+    "password": "$2b$10$NHUJ91tDg4npnIP26MUHeOv1CAvDww9BeCnhPazPt2wi/m5OxjCPq",
+    "name": "temp1",
+    "about": null,
+    "birthday": null
+  }
+}

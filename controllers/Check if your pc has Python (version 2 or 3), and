@@ -1,0 +1,44 @@
+Check if your pc has Python (version 2 or 3), and MySQL
+
+1.) Open Terminal/Command Prompt
+2.) Type on command line to check for Python,
+	on Windows: py --version
+	on Ubuntu: python --version
+
+3.) Type on command line to check for MySQL,
+	on any OS: mysql -V
+
+4.) Check if Tkinter is installed on your system
+	on Linux (python 3): sudo apt-get install python3-tk
+	on Linux (python 2.7): sudo apt-get install python-tk 
+
+	Some Linux distributions comes with yum installer that can install tkinter module using the command:
+
+	yum install tkinter
+
+	Run the ff command and if the command executes withous errors:
+	python 3: import tkinter as tk
+	python 2.7: import Tkinter as tk 
+
+	If you are using Windows or MacOS, Tkinter already comes pre-installed with the Python Installer
+
+5.) If you have successfully checked or installed all the prerequisites, you may now start the create your database.
+	Start by opening a Terminal/Command Prompt. Then type in the path to the folder named "database" on the project folder.
+		Ex. For Windows, if the project is saved on the Desktop, "cd Desktop/Family-Oriented-Medical-Record/database"
+	Once you have opened a terminal/command prompt with its path on the "database" folder, you may open MySQL. 
+	On the MySQL, type in the command, "source medicalrecord.sql" to create the database for the medical record system. 
+	The sql file can be found in the database folder. Inside the file are queries to create the database and the tables needed by the system.
+	after running the query, the database should be created.
+
+6.) Open the python file named "medicalrecord.py". On line 5944, enter the username you are using on MySQL. On line 5945, enter the password for your MySQL (if any).
+	Remember to check if the credentials entered on the username and password field are correct, or else MySQL will refuse the connection to the app.
+
+7.) Open another terminal/command prompt and set the path on the main project folder. Once finished, run the python file.
+	On windows: py medicalrecord.py
+	On Ubuntu (python 3): python3 medicalrecord.py
+	On Ubuntu (python 2.7): python medicalrecord.py
+
+	The program will execute without errors if the database is propely set-up and the modules needed are installed (see README.md on the project folder)
+
+8.) The system will start on the Landing Page. Here, there are two options: Continue or Add a new Patient. 
+	If you have a patient currently existing on your database, use the drop down menu to select the patient then click "Continue"
