@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "train": "cd training_data && node train.js",
+    "build-server": "npm install",
+    "build-client": "cd front-end && npm install",
+    "server": "node index.js",
+    "client": "cd front-end && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +23,8 @@
     "path": "^0.12.7",
     "rss-parser": "^3.10.0"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
 }

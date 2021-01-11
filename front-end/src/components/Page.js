@@ -190,7 +190,7 @@ class Page extends Component {
 					<div className = "navbar-main">
 						<form>
 							<input className = "search-bar" type="text" name="search" placeholder="&nbsp;Search" onFocus={this.handleSearch.bind(this)} onBlur={this.handleSearch.bind(this)}/>
-							<button className = "searchbtn" onClick={this.menuClick.bind(this)}> &#x1f50e; </button>
+							<button className = "searchbtn" onClick={this.menuClick.bind(this)}><text>&#9906;</text></button>
 						</form>
 					</div>
 				</div>
