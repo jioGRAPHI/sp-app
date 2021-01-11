@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../css/page.css';
 
 class Page extends Component {
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state = {
 			articles: [],
 			agri: [],
@@ -12,6 +12,7 @@ class Page extends Component {
 			s_agri: [],
 			s_nat: [],
 			s_aqua: [],
+			search_key: "",
 			sidebarWidth: 0,
 			bgColor: "#ffffff",
 			agribgColor: "#ffffff",
@@ -23,19 +24,21 @@ class Page extends Component {
 			agriView: true,
 			natView: true,
 			aquaView: true,
+			searchView: false,
 			featIndx: 0,
 			featOp: 1,
 			featDisp: "block"
 		};
 
 		this.setFeatured = this.setFeatured.bind(this);
+		this.handleSearch = this.handleSearch.bind(this);
+		this.searchInput = this.searchInput.bind(this);
 	}
 
 	showFeed() {
 		fetch('http://localhost:3001/get-feed')
 		.then((response) => {return response.json() })
 		.then((body) => {
-			console.log(body)
 			this.setState({ 
 				articles: body.articles,
 				agri: body.agri,
@@ -48,23 +51,33 @@ class Page extends Component {
 		});
 	}
 
-	// showSearched() {
-	// 	this.setState({search: []});
+	searchInput(e){
+		if(e.target.value === ""){
+			this.setState({ search_key: e.target.value, searchView: false}, () => {
+				this.handleSearch();
+			});
+		}else{
+			this.setState({ search_key: e.target.value, searchView: true}, () => {
+				this.handleSearch();
+				this.showSearched(this.state.search_key);
+			});
+		}
+	}
 
-	// 	fetch('http://localhost:3001/get-search')
-	// 	.then((response) => {return response.json() })
-	// 	.then((body) => {
-	// 		console.log(body)
-	// 		this.setState({ 
-	// 			s_agri: body.search_agri,
-	// 			s_nat: body.search_nat,
-	// 			s_aqua: body.search_aqua,
-	// 		})
-	// 	})
-	// 	.catch((error) => {
-	// 		console.log('Error: ', error);
-	// 	});
-	// }
+	showSearched(term) {
+		fetch('http://localhost:3001/get-search/' + term)
+		.then((response) => {return response.json() })
+		.then((body) => {
+			this.setState({ 
+				s_agri: body.search_agri,
+				s_nat: body.search_nat,
+				s_aqua: body.search_aqua
+			})
+		})
+		.catch((error) => {
+			console.log('Error: ', error);
+		});
+	}
 
 	componentDidMount(){
 		this.showFeed();
@@ -116,11 +129,6 @@ class Page extends Component {
 	setFeatured(){
 		var val = this.state.featIndx;
 		const article_list = this.state.articles
-		// if (val < article_list.length && val + 5 < article_list.length) {
-		// 	val = val + 5;
-		// }else{
-		// 	val = 0;
-		// }
 
 		val = Math.floor(Math.random() * article_list.length);
 
@@ -138,32 +146,13 @@ class Page extends Component {
 	}
 
 	handleSearch(e){
-		const val = this.state.featDisp == "block" ? "none" : "block";
-		if (val == "none"){
+		if (this.state.searchView){
 			this.setState({
-				featDisp: val,
-				agriView: false,
-				natView: false,
-				aquaView: false,
-				agribgColor: "#404040",
-				agrifgColor: "#ffffff",
-				natbgColor: "#404040",
-				natfgColor: "#ffffff",
-				aquabgColor: "#404040",
-				aquafgColor: "#ffffff",
+				featDisp: "none", agriView: false, natView: false, aquaView: false, agribgColor: "#404040", agrifgColor: "#ffffff", natbgColor: "#404040", natfgColor: "#ffffff", aquabgColor: "#404040", aquafgColor: "#ffffff",
 			});
 		}else{
 			this.setState({
-				featDisp: val,
-				agriView: true,
-				natView: true,
-				aquaView: true,
-				agribgColor: "#ffffff",
-				agrifgColor: "#404040",
-				natbgColor: "#ffffff",
-				natfgColor: "#404040",
-				aquabgColor: "#ffffff",
-				aquafgColor: "#404040",
+				featDisp: "block", agriView: true, natView: true, aquaView: true, agribgColor: "#ffffff", agrifgColor: "#404040", natbgColor: "#ffffff", natfgColor: "#404040", aquabgColor: "#ffffff", aquafgColor: "#404040",
 			});
 		}
 		
@@ -188,10 +177,7 @@ class Page extends Component {
 						</div>
 					</div>
 					<div className = "navbar-main">
-						<form>
-							<input className = "search-bar" type="text" name="search" placeholder="&nbsp;Search" onFocus={this.handleSearch.bind(this)} onBlur={this.handleSearch.bind(this)}/>
-							<button className = "searchbtn" onClick={this.menuClick.bind(this)}><text>&#9906;</text></button>
-						</form>
+						<div className = "search-bar-container"><input className = "search-bar" type="text" name="search" placeholder="Search" value={this.state.search_key} onChange={this.searchInput.bind(this)}/></div>
 					</div>
 				</div>
 
@@ -223,7 +209,7 @@ class Page extends Component {
 													<h4 className = "article-date">{article.pubDate}</h4>
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Agriculture</h4>
-													<img className = "article-img"/>
+													<img className = "article-img" src={article.content}/>
 												</div>
 											</a>
 								}
@@ -237,7 +223,7 @@ class Page extends Component {
 												<div className = "center-container">
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Aquatic Resources</h4>
-													<img className = "article-img"/>
+													<img className = "article-img" src={article.content}/>
 												</div>
 											</a>
 								}
@@ -251,7 +237,49 @@ class Page extends Component {
 												<div className = "center-container">
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Natural Resources</h4>
-													<img className = "article-img"/>
+													<img className = "article-img" src={article.content}/>
+												</div>
+											</a>
+								}
+							})}
+
+							{this.state.s_agri.map((article) => {
+								if(!this.state.searchView){
+									return null
+								}else{
+									return <a className = "a-link" href = {article.link}>
+												<div className = "center-container">
+													<h3 className = "article-title">{article.title} </h3>
+													<h4 className = "article-tag">Agriculture</h4>
+													<img className = "article-img" src={article.content}/>
+												</div>
+											</a>
+								}
+							})}
+
+							{this.state.s_aqua.map((article) => {
+								if(!this.state.searchView){
+									return null
+								}else{
+									return <a className = "a-link" href = {article.link}>
+												<div className = "center-container">
+													<h3 className = "article-title">{article.title} </h3>
+													<h4 className = "article-tag">Aquatic Resources</h4>
+													<img className = "article-img" src={article.content}/>
+												</div>
+											</a>
+								}
+							})}
+
+							{this.state.s_nat.map((article) => {
+								if(!this.state.searchView){
+									return null
+								}else{
+									return <a className = "a-link" href = {article.link}>
+												<div className = "center-container">
+													<h3 className = "article-title">{article.title} </h3>
+													<h4 className = "article-tag">Natural Resources</h4>
+													<img className = "article-img" src={article.content}/>
 												</div>
 											</a>
 								}
@@ -279,3 +307,5 @@ export default Page;
 // 						})}
 // 					</div>
 // 				</div>
+
+						// <button className = "searchbtn" type="submit" onClick={this.showSearched.bind(this)}><text>&#9906;</text></button>

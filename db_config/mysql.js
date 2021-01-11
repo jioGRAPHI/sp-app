@@ -9,7 +9,7 @@ if (process.env.JAWSDB_MARIA_URL){
 	connection = mysql.createConnection({
 		host: 'localhost',
 		user: 'root',
-		password: '',
+		password: 'b1gheadJigz0116',
 		database: 'news_aggregator',
 		multipleStatements: true,
 		connectTimeout: 100000

@@ -17,7 +17,7 @@ var nat = [];
 var search = [];
 var search_agri = [];
 var search_aqua = [];
-var search_anat = [];
+var search_nat = [];
 
 exports.getRSSFeeds = (req, res)=>{
 	const SEARCH_FEED = 'SELECT * FROM rss WHERE is_enabled= 1'
@@ -39,7 +39,11 @@ exports.getRSSFeeds = (req, res)=>{
 				}
 				await natural.BayesClassifier.load(traindat, null, function(err, classifier) {
 					for(var i = 0; i < list_articles.length; i += 1){
-						var predict = classifier.classify(list_articles[i].contentSnippet)
+						if(typeof list_articles[i]['content:encodedSnippet'] === 'undefined'){
+							var predict = classifier.classify(list_articles[i].contentSnippet)
+						}else{
+							var predict = classifier.classify(list_articles[i]['content:encodedSnippet'])
+						}
 						if(predict == 0){
 							agri.push(list_articles[i]);
 						}else if(predict == 1){
@@ -68,47 +72,52 @@ exports.getRSSFeeds = (req, res)=>{
 	})
 }
 
-// exports.searchRSSFeeds = (req, res)=>{
-// 	if(!err){
-// 		search.length = 0;
-// 		search_agri.length = 0;
-// 		search_aqua.length = 0;
-// 		search_nat.length = 0;
 
-// 		(async () => {
-// 			list_articles.items.forEach(item => {
-// 				trie.addString(item[i].contentSnippet);
-// 				if(trie.contains(SEARCH_TERM)){
-// 					search.push(item);
-// 				}
-// 			});
+exports.searchRSSFeeds = (req, res)=>{
+	const term = req.params.term;
 
+	search.length = 0;
+	search_agri.length = 0;
+	search_aqua.length = 0;
+	search_nat.length = 0;
 
-// 			await natural.BayesClassifier.load(traindat, null, function(err, classifier) {
-// 				for(var i = 0; i < search.length; i += 1){
-// 					var predict = classifier.classify(search[i].contentSnippet)
-// 					if(predict == 0){
-// 						search_agri.push(list_articles[i]);
-// 					}else if(predict == 1){
-// 						search_aqua.push(list_articles[i]);
-// 					}else if(predict == 2){
-// 						search_nat.push(list_articles[i]);
-// 					}else{
-// 						continue;
-// 					}
-// 				}
+	(async () => {
 
-// 				return res.json({
-// 					search_agri: search_agri,
-// 					search_aqua: search_aqua,
-// 					search_nat: search_nat,
-// 				});
-// 			});
-// 		})();
-// 	}
-// 	else{
-// 		return res.json({
-// 			error: 'failed'
-// 		})
-// 	}
-// }
+		for(i = 0; i < list_articles.length; i++){
+			if(typeof list_articles[i]['content:encodedSnippet'] === 'undefined'){
+				if (list_articles[i].contentSnippet.toLowerCase().includes(term.toLowerCase())){
+					search.push(list_articles[i]);
+				}
+			}else{
+				if (list_articles[i]['content:encodedSnippet'].toLowerCase().includes(term.toLowerCase())){
+					search.push(list_articles[i]);
+				}
+			}
+		}
+
+		await natural.BayesClassifier.load(traindat, null, function(err, classifier) {
+			for(var i = 0; i < search.length; i += 1){
+				if(typeof search[i]['content:encodedSnippet'] === 'undefined'){
+					var predict = classifier.classify(search[i].contentSnippet)
+				}else{
+					var predict = classifier.classify(search[i]['content:encodedSnippet'])
+				}
+				if(predict == 0){
+					search_agri.push(search[i]);
+				}else if(predict == 1){
+					search_aqua.push(search[i]);
+				}else if(predict == 2){
+					search_nat.push(search[i]);
+				}else{
+					continue;
+				}
+			}
+
+			return res.json({
+				search_agri: search_agri,
+				search_aqua: search_aqua,
+				search_nat: search_nat,
+			});
+		});
+	})();
+}
