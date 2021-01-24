@@ -37,6 +37,11 @@ exports.getRSSFeeds = (req, res)=>{
 						list_articles.push(item);
 					});
 				}
+
+				await list_articles.sort(function (a, b) {
+					return b.isoDate.localeCompare(a.isoDate);
+				});
+
 				await natural.BayesClassifier.load(traindat, null, function(err, classifier) {
 					for(var i = 0; i < list_articles.length; i += 1){
 						if(typeof list_articles[i]['content:encodedSnippet'] === 'undefined'){

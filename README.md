@@ -1,7 +1,7 @@
 # Agriculutral News Aggregator
 
 ## Installing Database:
-**run sources.sql_ as source in MySQL**
+**run sources.sql_ from the /db folder as source in MySQL**
 > source sources.sql
 
 ## Build node_modules:

@@ -14,7 +14,7 @@ class Page extends Component {
 			s_aqua: [],
 			search_key: "",
 			sidebarWidth: 0,
-			bgColor: "#ffffff",
+			bgColor: "#222629",
 			agribgColor: "#ffffff",
 			natbgColor: "#ffffff",
 			aquabgColor: "#ffffff",
@@ -99,7 +99,7 @@ class Page extends Component {
 	}
 
 	menuClick(e) {
-		const col = this.state.sidebarWidth === 0 ? "#404040" : "#ffffff";
+		const col = this.state.sidebarWidth === 0 ? "#86c232" : "#222629";
 		const val = this.state.sidebarWidth === 0 ? 20 : 0;
 		this.setState({
 			sidebarWidth: val,
@@ -109,8 +109,8 @@ class Page extends Component {
 
 	agriClick(e) {
 		const val = this.state.agriView === true ? false : true;
-		const bgcol = this.state.agriView === true ? "#404040" : "#ffffff";
-		const fgcol = this.state.agriView === true ? "#ffffff" : "#404040";
+		const bgcol = this.state.agriView === true ? "#17252A" : "#ffffff";
+		const fgcol = this.state.agriView === true ? "#ffffff" : "#17252A";
 		this.setState({
 			agriView: val,
 			agribgColor: bgcol,
@@ -120,8 +120,8 @@ class Page extends Component {
 
 	natClick(e) {
 		const val = this.state.natView === true ? false : true;
-		const bgcol = this.state.natView === true ? "#404040" : "#ffffff";
-		const fgcol = this.state.natView === true ? "#ffffff" : "#404040";
+		const bgcol = this.state.natView === true ? "#17252A" : "#ffffff";
+		const fgcol = this.state.natView === true ? "#ffffff" : "#17252A";
 		this.setState({
 			natView: val,
 			natbgColor: bgcol,
@@ -131,8 +131,8 @@ class Page extends Component {
 
 	aquaClick(e) {
 		const val = this.state.aquaView === true ? false : true;
-		const bgcol = this.state.aquaView === true ? "#404040" : "#ffffff";
-		const fgcol = this.state.aquaView === true ? "#ffffff" : "#404040";
+		const bgcol = this.state.aquaView === true ? "#17252A" : "#ffffff";
+		const fgcol = this.state.aquaView === true ? "#ffffff" : "#17252A";
 		this.setState({
 			aquaView: val,
 			aquabgColor: bgcol,
@@ -213,7 +213,7 @@ class Page extends Component {
 				</div>
 
 				<div className = "component-body">
-					<p className = "subtitle" style={{display: this.state.featDisp}}> More Articles </p>
+					<p className = "subtitle" style={{display: this.state.featDisp}}> MORE ARTICLES </p>
 					<div className = "center-body">
 							{this.state.agri.map((article, key) => {
 								if(!this.state.agriView){
@@ -235,6 +235,7 @@ class Page extends Component {
 								}else{
 									return <a className = "a-link" href = {article.link} key = {key}>
 												<div className = "center-container">
+													<h4 className = "article-date">{article.pubDate}</h4>
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Aquatic Resources</h4>
 												</div>
@@ -248,6 +249,7 @@ class Page extends Component {
 								}else{
 									return <a className = "a-link" href = {article.link} key = {key}>
 												<div className = "center-container">
+													<h4 className = "article-date">{article.pubDate}</h4>
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Natural Resources</h4>
 												</div>
@@ -262,6 +264,7 @@ class Page extends Component {
 								}else{
 									return <a className = "a-link" href = {article.link} key = {key}>
 												<div className = "center-container">
+													<h4 className = "article-date">{article.pubDate}</h4>
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Agriculture</h4>
 												</div>
@@ -275,6 +278,7 @@ class Page extends Component {
 								}else{
 									return <a className = "a-link" href = {article.link} key = {key}>
 												<div className = "center-container">
+													<h4 className = "article-date">{article.pubDate}</h4>
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Aquatic Resources</h4>
 												</div>
@@ -288,6 +292,7 @@ class Page extends Component {
 								}else{
 									return <a className = "a-link" href = {article.link} key = {key}>
 												<div className = "center-container">
+													<h4 className = "article-date">{article.pubDate}</h4>
 													<h3 className = "article-title">{article.title} </h3>
 													<h4 className = "article-tag">Natural Resources</h4>
 												</div>
