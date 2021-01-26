@@ -1,0 +1,52 @@
+Satellite data sent to the Bureau of Fisheries and Aquatic Resources (BFAR) show that the automatic identification system on the Chinese vessel that hit FB Gem-Ver went “dark” every time the ship left its country.
+
+Groups tackling illegal fishing in the Philippines are now wondering this was intentional or not.
+
+The International Maritime Organization requires ships of 300 gross tonnage and more, and traveling international routes, to be fitted with AIS devices that should run at all times. 
+
+
+But according to Oceana Philippines, it has monitored fishing boats that go “dark,” a tactic purportedly linked to illegal fishing.
+
+Using the SeaVision interface, which shows AIS data, BFAR’s Vessel Operations Center checked the routes taken by Yuemaobinyu 42212 after China confirmed that it is a fishing vessel.
+
+After China confirmed that it was their fishing vessel Yuemaobinyu 42212 that hit FB GEM-VER, the staff at BFAR’s Vessel Operation Center checked its history trail. @ABSCBNNews pic.twitter.com/2zzzvEeCoC — Kristine Sabillo (@kristinesabillo) June 19, 2019
+The AIS data showed that the vessel’s location became unknown once it departed its home port.
+
+“So hindi pa natin ma-determine kung pinatay o nagpatay ng AIS during the incident happened,” said Zaldy Perez, officer-in-charge of BFAR’s Fisheries Information Management Center.
+
+A closer look at the data showed that Yuemaobinyu was off the grid from April 27 to June 12. It was on June 9 that the Chinese ship rammed FB Gem-Ver.
+
+
+“What did the government do when the Chinese government acknowledged that the foreign fishing vessel is under them? Did it appear in our AIS system? If it did not, we should have reason to ask why,” said Oceana Philippines vice president Gloria Ramos. 
+
+Prof. Jay Batongbacal, executive director of the University of the Philippines Institute for Maritime Affairs and the Law, said that China uses its own system to monitor its fishing fleet.
+
+“But this practice of disabling the open source AIS when actually fishing is quite rampant, especially if they go to areas where they are not supposed to be,” Batongbacal told ABS-CBN. 
+
+“By allowing this practice, China is condoning their conduct of illegal, unreported, and unregulated (IUU) fishing not only in (the South China Sea) but worldwide.”
+
+Because there’s no AIS data for the Chinese vessel, we cannot see where it was exactly before it reached Reed Bank or how long it was staying there. BFAR says they can’t determine if the AIS device was accidentally or deliberately turned off @ABSCBNNews pic.twitter.com/ztMj5kgwy5 — Kristine Sabillo (@kristinesabillo) June 19, 2019
+MONITORING TO HELP DISTRESSED FISHERMEN
+
+
+According to Oceana, tracking is even more difficult in the Philippines without the full implementation of vessel monitoring measures (VMM).
+
+Under Republic Act 10654, or the amended Fisheries Code, all fishing vessels should follow VMM. But not all Philippine vessels have transponders or AIS devices that would allow the government to track Philippine vessels, their speed, and their catch for the day.
+
+“Imagine if this is in place in the whole country,” Ramos said. “Then the issue of poaching will be addressed. Even the safety of our fisherfolk will be considered and protected. Why is it that we don’t have it here?”
+
+Last year, Oceana Philippines filed a Writ of Continuing Mandamus to require BFAR to issue rules on the monitoring of fishing vessels.
+
+SC urged to compel gov't agencies to issue rules on fishing vessel monitoring
+Ramos said the crew members of FB Gem-Ver would have been rescued earlier if the VMM had been fully implemented.
+
+But BFAR national director Eduardo Gongona said it’s not that easy.
+
+
+“Monitoring will speed up the process but going to the place of the accident will still take time,” he said, explaining the need to balance resources.
+
+“We can’t give transponders to all (fishing vessels) because the budget of the government is limited.”
+
+According to Perez, they are hoping to attach transponders to all 5,000 commercial fishing vessels by the end of the year. And by next year, they hope to get the budget for the Phase 3 of the VMM, which will require transponders for around 300,000 municipal fishing vessels. Perez estimates they will need P8 billion for this. 
+
+Ramos said if the Philippine government is serious about VMM, it could find ways to fully implement such as tapping grants and donors.

@@ -1,0 +1,76 @@
+At the Vessel Operation Center of BFAR, employees track the movement of Philippine and foreign fishing vessels using different systems. @ABSCBNNews pic.twitter.com/WIgEhY8nb9 — Kristine Sabillo (@kristinesabillo) June 19, 2019
+It took 2 hours for crew members of FB GEM-VER to reach the Vietnamese boat that would save them. 
+
+How the Vietnamese rescued Pinoy fishermen rammed by Chinese vessel
+“Vietnam? Philippines? Friends,” the crew recalled the Vietnamese saying. It took another hour, according to The Saigon Times, for the Vietnamese boat to reach Recto Bank (Reed Bank) where they found the rest of the Filipino crew members clinging onto barrels and shipwreck allegedly caused by the Chinese fishing vessel Yuemaobinyu 42212.
+
+Vietnamese fishermen masayang nailigtas ang Pinoy crew ng F/B GEM-VER
+By that time, the Filipino fishermen were shivering and hungry. Non-profit organization Oceana Philippines said it believes the rescue would have been done faster if the Philippine government had fully implemented its mandated vessel monitoring measures (VMM).
+
+
+Under the amended Fisheries Code of Republic Act 10654, passed in 2014, fishing vessels are required to comply with the said measures. According to the Bureau of Fisheries and Aquatic Resources (BFAR), tracking measures include fitting fishing vessels with devices that would send out data via satellite, radio frequency or mobile networks.
+
+However, Oceana Philippines said it is taking too long to reach its full implementation.
+
+“Imagine if this is in place in the whole country,” said Oceana Philippines vice-president Gloria Ramos. “Then the issue of poaching will be addressed. Even the safety of our fisherfolk will be considered and protected. Why is it that we don’t have it yet?”
+
+
+Watch more in iWantTFC
+VESSEL MONITORING TECHNOLOGY
+
+At the Vessel Operation Center of the BFAR, staff monitor data coming from commercial fishing vessels inside and outside the Philippines.
+
+One monitor shows the interface of SeaVision, which tracks satellite data including those sent by automatic identification system (AIS) devices attached to cargo ships, commercial fishing vessels and the like. Here, large ships from different countries can be seen in their last known location plotted on the map. The main use of the AIS is to avoid maritime collisions, but it only tracks ships of at least 300 gross tonnage and traveling international routes, as required by the rules of the International Maritime Organization.
+
+
+SeaVision also displays Visible Infrared Imaging Radiometer Suite (VIIRS) data, which detects light at sea. While it is not able to identify the boats' country of origin, it is useful for checking the presence of vessels at night that may not have AIS.
+
+Another tracker is the Philippine government’s vessel monitoring system, which can be monitored through the interface of the Thematic Maritime System (Themis). Unlike the AIS, the data is not open to the public. It also only tracks Philippine ships fitted with transponders, but the government can get more information out of it, which includes the daily catch of fishing vessels.
+
+“We overlay those three (systems) to come up with a better analysis when it comes to the movement of vessels,” said Zaldy Perez, officer-in-charge of BFAR’s Fisheries Information Management Center.
+
+Every day, BFAR’s Vessel Operation Center monitors vessels coming in and out of the Philippines’ exclusive economic zone, checking if any of them do not have the proper papers or approval.
+
+DISTRESS SIGNALS
+
+A fully implemented VMS would allow the BFAR to see the movement of all Philippine fishing vessels, making sure that commercial ones are not encroaching in municipal waters, which can lead to overfishing. At the same time, it would also help fishermen such as those on the FB GEM-VER.
+
+
+“If they have a transponder, it will send a distress signal and we can immediately monitor if it is already underwater or if it was turned off,” Perez said.
+
+For now though, the agency only has a budget for transponders allotted for commercial fishing vessels. Perez said each unit costs P80,000. While the government pays for the transponder, the owner of the vessel will have to pay about P30,000 annually after the first year for subscription to the service. Without the subscription, the device would not be able to send data.
+
+Perez said the BFAR has already attached transponders to 1,500 commercial shipping vessels. The agency hopes to have all 5,000 commercial fishing vessels connected to the system by the end of the year.
+
+The challenge now is how to implement the mandated VMM among municipal fishing vessels.
+
+Last year, Oceana Philippines filed a Writ of Continuing Mandamus to urge the BFAR to hasten the implementation of its monitoring measures. 
+
+SC urged to compel gov't agencies to issue rules on fishing vessel monitoring
+“It’s the mandate of the agency to monitor and regulate the fisheries activities in the Philippines,” Oceana’s Ramos said. “If we have the data, we can respond to all these questions.”
+
+
+BUDGET CONSTRAINTS
+
+But the bureau said a full-on enforcement of the VMM not that easy.
+
+“We can’t give devices to everyone. The government’s budget is limited. We can’t provide for 300,000 ships,” BFAR national director Eduardo Gongona said. 
+
+Gongona also dismissed Oceana’s remarks that the VMM will help hasten rescue operations.
+
+“Monitoring is not enforcement,” he said. “Monitoring is a way to speed up reports, but it will take time to get to the distressed vessel.”
+
+Gongona, a former commander of the Philippine Coast Guard, said it is important to balance resources, adding that the bureau is also focused on increasing food production of the country.
+
+
+Because they won’t require satellite data, the transponder for smaller boats, which will most likely utilize mobile data, will only cost about P15,000 and a P2,000 annual subscription. But according to Perez, it will probably cost P8 billion to buy and attach transponders for the 300,000 or so municipal fishing vessels.
+
+However, Ramos is not convinced. 
+
+“Sometimes I really wonder if the budget is really a problem,” she said, pointing out that the bureau is earning and could earn more from fines and penalties. “If they improve enforcement and hold violators to account then they will have a big fund.”
+
+Ramos said if the government is serious about combating illegal fishing, it could also tap grants and donations from international organizations. 
+
+She said large commercial vessels should not be subsidized and instead be required to buy their own transponders.
+
+“The incident in the Recto Bank may not be the last if we will continue to ignore the safeguards that legally should be in place to protect our ocean and our people,” Ramos said.

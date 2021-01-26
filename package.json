@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "train": "cd training_data && node train.js",
+    "test": "cd training_data && node test.js",
     "build-server": "npm install",
     "build-client": "cd front-end && npm install",
     "server": "node index.js",
